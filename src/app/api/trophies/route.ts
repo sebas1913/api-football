@@ -1,9 +1,9 @@
 import { TrophieService } from '@/app/infrastructure/services/trophies.service';
 import { NextResponse } from 'next/server';
 
-export async function GET(_: Request) {
+export async function GET() {
     const service = new TrophieService();
-    const playerId = "276";
+    const playerId = "";
 
     try {
         const response = await service.findById(playerId);
