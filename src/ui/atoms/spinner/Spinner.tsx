@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import styles from './Spinner.module.scss';
+import styles from './spinner.module.scss';
 
 const Spinner: React.FC = () => {
     return (
