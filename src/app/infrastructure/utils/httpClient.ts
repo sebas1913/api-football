@@ -17,7 +17,9 @@ export class HttpClient {
 
     private getHeaders() {
         const headers = new Headers();
-        const apiKey = process.env.NEXT_PUBLIC_RAPIDAPI_KEY;
+        const apiKey = process.env['NEXT_PUBLIC_RAPIDAPI_KEY'];
+        console.log('API KEY', apiKey);
+        
         if (!apiKey) {
             throw new Error("N/A API KEY");
         }
