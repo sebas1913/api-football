@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+.navbar {
+    .nav {
+        background-color: #383838;
+        height: 6rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .input{
+            height: 2rem;
+        }
+    }
+
+    .options {
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        padding: 0.5rem;
+
+        .link{
+            text-decoration: none;
+            color: $color-tertiary;
+        }
+    }
+}

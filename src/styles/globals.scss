@@ -1,0 +1,24 @@
+:root {
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-poppins), sans-serif;
+    background-color: #6E6E6E;
+    color: #fff;
+}
+
+.main{
+    width: 80%;
+    margin: auto;
+}
