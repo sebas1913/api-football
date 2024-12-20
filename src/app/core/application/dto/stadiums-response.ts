@@ -1,7 +1,7 @@
 export interface IStadiumsResponse {
     get:        string;
     parameters: Parameters;
-    errors:     any[];
+    errors:     unknown[];
     results:    number;
     paging:     Paging;
     response:   Response[];

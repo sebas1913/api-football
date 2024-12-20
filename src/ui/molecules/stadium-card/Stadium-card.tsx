@@ -1,5 +1,5 @@
 import { Response } from '@/app/core/application/dto/stadiums-response';
-import { Icons } from '@/ui/atoms/icons/Icons';
+// import { Icons } from '@/ui/atoms/icons/Icons';
 import styles from './stadiumCard.module.scss'
 import Title from "@/ui/atoms/title/Title";
 import Paragraph from "@/ui/atoms/paragraph/Paragraph";
