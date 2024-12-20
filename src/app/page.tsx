@@ -23,10 +23,13 @@ export default function Home() {
         }
 
         setLoading(true);
-        setError(""); 
+        setError("");
+
+        //Eliminar tildes
+        const normalizedSearchTerm = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
         try {
-            const response = await fetch(`/api/teams?search=${searchTerm}`);
+            const response = await fetch(`/api/teams?search=${normalizedSearchTerm}`);
 
             if (!response.ok) {
                 throw new Error('Failed to fetch teams');
@@ -40,7 +43,7 @@ export default function Home() {
             } else {
                 setError('An unknown error occurred');
             }
-        }finally {
+        } finally {
             setLoading(false);
         }
     };
@@ -66,7 +69,7 @@ export default function Home() {
             </div>
 
             {loading && (
-                <Spinner/>
+                <Spinner />
             )}
 
             {error && <Paragraph className={styles.error}>{error}</Paragraph>}

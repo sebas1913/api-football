@@ -13,26 +13,26 @@ const TeamCard = ({ teamData }: TeamCardProps) => {
     return (
         <div className={styles.teamCard} key={teamData.team.id}>
             <div className={styles.cardHeader}>
-                <Title level={2}>{teamData.team.name}</Title>
-                <Image src={teamData.team.logo} alt={teamData.team.name} width={100} height={100} />
-                <Paragraph>{teamData.team.founded}</Paragraph>
+                <Title level={2}>{teamData.team.name ?? 'Unknown'}</Title>
+                <Image src={teamData.team.logo} alt={teamData.team.name} width={100} height={100}/>
+                <Paragraph>{teamData.team.founded ?? 'Unknown'}</Paragraph>
             </div>
 
             <div className={styles.info}>
                 {Icons.world}
-                <Paragraph>{teamData.team.country}</Paragraph>
+                <Paragraph>{teamData.team.country ?? 'Unknown'}</Paragraph>
             </div>
             <div className={styles.info}>
                 {Icons.city}
-                <Paragraph>{teamData.venue.city}</Paragraph>
+                <Paragraph>{teamData.venue.city ?? 'Unknown'}</Paragraph>
             </div>
             <div className={styles.info}>
                 {Icons.stadium}
-                <Paragraph> {teamData.venue.name}</Paragraph>
+                <Paragraph> {teamData.venue.name ?? 'Unknown'}</Paragraph>
             </div>
             <div className={styles.info}>
                 {Icons.capacity}
-                <Paragraph>{teamData.venue.capacity}</Paragraph>
+                <Paragraph>{teamData.venue.capacity ?? 'Unknown'}</Paragraph>
             </div>
         </div>
     );

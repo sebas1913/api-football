@@ -6,3 +6,11 @@
         flex-wrap: wrap;
     }
 }
+
+@media (max-width: 600px) {
+    .container{
+        .containerCards{
+            justify-content: center;
+        }
+    }
+}

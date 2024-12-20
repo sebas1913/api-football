@@ -30,3 +30,9 @@
         margin-top: 0.5rem;
     }
 }
+
+@media (max-width: 600px) {
+    .teamCard{
+        width: 85%;
+    }
+}
