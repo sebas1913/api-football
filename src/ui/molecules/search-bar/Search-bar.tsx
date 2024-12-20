@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from "@/ui/atoms/input/Input";  
 import Button from "@/ui/atoms/button/Button";
-import styles from './SearchBar.module.scss';
+import styles from './searchbar.module.scss';
 
 interface SearchBarProps {
     searchTerm: string;

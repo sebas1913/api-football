@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import styles from './main.module.scss';
 import { Response } from "./core/application/dto/teams-response";
+import styles from './main.module.scss';
 import Title from "@/ui/atoms/title/Title";
 import Paragraph from "@/ui/atoms/paragraph/Paragraph";
-import Input from "@/ui/atoms/input/Input";
-import Button from "@/ui/atoms/button/Button";
 import TeamCard from "@/ui/molecules/team-card/Team-card";
 import Spinner from "@/ui/atoms/spinner/Spinner";
 import SearchBar from "@/ui/molecules/search-bar/Search-bar";
