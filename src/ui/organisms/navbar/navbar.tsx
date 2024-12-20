@@ -40,11 +40,10 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className={styles.options}>
-                <Link href='/plays' className={styles.link}>In play</Link>
-                <Link href='/transfers' className={styles.link}>Transfers</Link>
-                <Link href='/leagues' className={styles.link}>Leagues</Link>
+                <Link href='/teams' className={styles.link}>Teams</Link>
+                <Link href='/stadiums'className={styles.link}>Stadiums</Link>
                 <Link href='/players' className={styles.link}>Players</Link>
-
+                {/* <Link href='/leagues' className={styles.link}>Leagues</Link> */}
             </div>
 
         </nav>

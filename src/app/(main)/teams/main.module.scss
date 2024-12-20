@@ -1,0 +1,23 @@
+.container {
+    margin: 1.5rem 0;
+
+    .containerCards {
+        margin: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.message {
+    padding: 0.5rem;
+    color: red;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        .containerCards {
+            justify-content: center;
+        }
+    }
+}

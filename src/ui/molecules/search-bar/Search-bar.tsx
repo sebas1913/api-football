@@ -7,14 +7,15 @@ interface SearchBarProps {
     searchTerm: string;
     setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
     handleSearch: () => void;
+    placeholder: string;
 }
 
-const SearchBar = ({ searchTerm, setSearchTerm, handleSearch }: SearchBarProps) => {
+const SearchBar = ({ searchTerm, setSearchTerm, handleSearch, placeholder }: SearchBarProps) => {
     return (
         <div className={styles.searchContainer}>
             <Input
                 type="text"
-                placeholder="Search for a team"
+                placeholder={placeholder}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />

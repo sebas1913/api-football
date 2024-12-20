@@ -1,0 +1,14 @@
+.stadiumCard{
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    width: 30.5%;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
+
+    .image{
+       width: 100%;
+       height: auto;
+    }
+}
