@@ -9,6 +9,7 @@ import Input from "@/ui/atoms/input/Input";
 import Button from "@/ui/atoms/button/Button";
 import TeamCard from "@/ui/molecules/team-card/Team-card";
 import Spinner from "@/ui/atoms/spinner/Spinner";
+import SearchBar from "@/ui/molecules/search-bar/Search-bar";
 
 export default function Home() {
     const [searchTerm, setSearchTerm] = useState<string>("");
@@ -51,21 +52,12 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <Title level={1}>Teams</Title>
-            <Paragraph>Enter the soccer team you want to know more about:</Paragraph>
             <div className={styles.searchContainer}>
-                <Input
-                    type="text"
-                    placeholder="Search for a team"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                <SearchBar
+                    searchTerm={searchTerm}
+                    handleSearch={handleSearch}
+                    setSearchTerm={setSearchTerm}
                 />
-                <Button
-                    variant="secondary"
-                    onClick={handleSearch}
-                    disabled={loading}
-                >
-                    Search
-                </Button>
             </div>
 
             {loading && (
@@ -83,7 +75,7 @@ export default function Home() {
             )}
 
             {teams.length === 0 && !loading && !error && (
-                <Paragraph>No teams found. Try another search.</Paragraph>
+                <Paragraph className={styles.message}>No teams found. Try another search.</Paragraph>
             )}
         </div>
     );

@@ -2,7 +2,8 @@
 
 .navbar {
     .nav {
-        background-color: #383838;
+        background-color: $color-black;
+        color: $color-tertiary;
         height: 6rem;
         display: flex;
         align-items: center;
@@ -37,7 +38,7 @@
 
         .link {
             text-decoration: none;
-            color: $color-tertiary;
+            color: $color-black;
         }
     }
 }
