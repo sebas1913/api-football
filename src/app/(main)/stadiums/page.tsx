@@ -72,7 +72,7 @@ export default function Stadiums() {
             )}
 
             {stadium.length === 0 && !loading && !error && (
-                <Paragraph className={styles.message}>No teams found. Try another search.</Paragraph>
+                <Paragraph className={styles.message}>No stadiums found. Try another search.</Paragraph>
             )}
         </div>
     );
