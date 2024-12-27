@@ -1,17 +1,26 @@
+"use client";
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { Icons } from '@/ui/atoms/icons/Icons';
 import Image from 'next/image';
 import styles from './navbar.module.scss';
 import Link from 'next/link';
 import Paragraph from '@/ui/atoms/paragraph/Paragraph';
-import { Icons } from '@/ui/atoms/icons/Icons';
 
 const Navbar: React.FC = () => {
-    const date = new Date();
+    const [formattedDate, setFormattedDate] = useState<string>('');
+    const pathname = usePathname();
 
-    const formattedDate = date.toLocaleDateString('en-EN', {
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric',
-    }).toUpperCase();
+
+    useEffect(() => {
+        const date = new Date();
+        const formatted = date.toLocaleDateString('en-EN', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric',
+        }).toUpperCase();
+        setFormattedDate(formatted);
+    }, []);
 
     return (
         <nav className={styles.navbar}>
@@ -40,14 +49,12 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className={styles.options}>
-                <Link href='/teams' className={styles.link}>Teams</Link>
-                <Link href='/stadiums'className={styles.link}>Stadiums</Link>
-                <Link href='/players' className={styles.link}>Players</Link>
-                {/* <Link href='/leagues' className={styles.link}>Leagues</Link> */}
+                <Link href='/teams' className={`${styles.link} ${pathname === '/teams' ? styles.active : ''}`}>Teams</Link>
+                <Link href='/stadiums' className={`${styles.link} ${pathname === '/stadiums' ? styles.active : ''}`}>Stadiums</Link>
+                <Link href='/players' className={`${styles.link} ${pathname === '/players' ? styles.active : ''}`}>Players</Link>
             </div>
-
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar;

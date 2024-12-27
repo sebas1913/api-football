@@ -9,7 +9,7 @@ import Paragraph from '@/ui/atoms/paragraph/Paragraph';
 import { Response } from '@/app/core/application/dto/stadiums-response';
 import StadiumCard from '@/ui/molecules/stadium-card/Stadium-card';
 
-export default function Leagues() {
+export default function Stadiums() {
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [stadium, setStadium] = useState<Response[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
@@ -66,10 +66,7 @@ export default function Leagues() {
             {stadium.length > 0 && (
                 <div className={styles.containerCards}>
                     {stadium.map((stadiumData) => (
-                        <StadiumCard
-                            key={stadiumData.id}
-                            stadiumData={stadiumData}
-                        />
+                        <StadiumCard key={stadiumData.id} stadiumData={stadiumData} />
                     ))}
                 </div>
             )}

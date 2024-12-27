@@ -39,6 +39,12 @@
         .link {
             text-decoration: none;
             color: $color-black;
+            padding: 0 1rem;
+        }
+
+        .active{
+            border-bottom: 0.2rem solid $color-secondary;
+            font-weight: 700;
         }
     }
 }

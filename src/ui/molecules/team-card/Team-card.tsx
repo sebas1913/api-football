@@ -30,10 +30,6 @@ const TeamCard = ({ teamData }: TeamCardProps) => {
                     {Icons.stadium}
                     <Paragraph> {teamData.venue.name ?? 'Unknown'}</Paragraph>
                 </div>
-                <div className={styles.info}>
-                    {Icons.capacity}
-                    <Paragraph>{teamData.venue.capacity ?? 'Unknown'}</Paragraph>
-                </div>
             </div>
         </div>
     );
